@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "2b772b3d-b06a-4248-815b-07f72c7d436a",
+		"name": "EMPRESAS-SUCURSALES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\":\"Tigo@gmail.com\",\r\n   \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTRO EMPRESA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"Claro\",\r\n   \"correo\":\"claro@gmail.com\",\r\n   \"password\":\"123456\",\r\n   \"tipo\":\"Telecomunicaciones\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empresas/registrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarEmpresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"Tigo\",\r\n   \"correo\":\"Tigo@gmail.com\",\r\n   \"password\":\"123456\",\r\n   \"tipo\":\"Telecomunicaciones\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empresas/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarSucursal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0MTAwZjNjMzEwM2Q0ZjU5NGJmMDkiLCJpYXQiOjE2Nzc5ODc4NTgsImV4cCI6MTY3ODAwMjI1OH0.yYyu9Po3wCascFvzFvXTSOiyEAtIzMSIWilQ_Fh5ACw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Tigo tigo spot\",\r\n    \"direccion\": \"5ta Avenida 10-50 zona 10\",\r\n    \"municipio\": \"Guatemala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursales/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarEmpresas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/empresas/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarSucursales",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAxMmU4NDk3YWFmMWVjZmUyMTNiMjYiLCJpYXQiOjE2Nzc4MTMzMjIsImV4cCI6MTY3NzgyNzcyMn0.JCj2-j6rVxmFR_MxDGLvIjjQ0uI4-OvLs88CUOxzuM0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/sucursales/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarEmpresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAxNzFhNWQxMzBjZDc1Y2QyMjVlYmUiLCJpYXQiOjE2Nzc4MTk0MDksImV4cCI6MTY3NzgzMzgwOX0.RdXNIUXNWsgs6S8MPYFFe3auTeMKE2dQka_Pcn-TWX0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"San Martin\",\r\n   \"correo\":\"Sanmartin@gmail.com\",\r\n   \"password\":\"123456\",\r\n   \"tipo\":\"Restaurante\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empresas/editar/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"editar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarSucusal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAxNzNmN2VkOWNlM2IyOTc3ZDNiNGIiLCJpYXQiOjE2Nzc5Njg3MjUsImV4cCI6MTY3Nzk4MzEyNX0.b-gnavWubd2ax3u8FyMfvMfWBSeov3Y248vvMwOl1bk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Zona 2\",\r\n    \"direccion\": \"5ta Avenida 10-50 zona 10\",\r\n    \"municipio\": \"San Miguel Petapa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursales/editar/6403c57a0ace37d90f468b60",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"editar",
+						"6403c57a0ace37d90f468b60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarEmpresa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzY2RjMTc5OGVhOWEyOTUxZmVjZmUiLCJpYXQiOjE2Nzc5NzA4ODcsImV4cCI6MTY3Nzk4NTI4N30.KRJ65ysk8NSh8uxa5-WC4No2ryrpC6Sbjv1Xh4cPzjY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/empresas/eliminar/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"eliminar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarSucursal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzYzkzZDg2ZWU4OGNmYzYzMWE3NzciLCJpYXQiOjE2Nzc5Njk3MzMsImV4cCI6MTY3Nzk4NDEzM30.IawTqqoyS3_KjdNWk4CZhnS97JF--MSL26N61ksloH8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/sucursales/eliminar/6403cad5743aa1ff953b083d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"eliminar",
+						"6403cad5743aa1ff953b083d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
